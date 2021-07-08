@@ -1,0 +1,454 @@
+/// FIRST MOBILE
+// colors
+$blue: #003a76
+$gold: #a48c23
+$white: #eee
+//font-family: 'Roboto', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+// swiper custom
+.swiper-button-prev:after
+    color: white
+.swiper-button-next:after
+    color: white 
+.swiper-pagination-bullet
+    color: white
+// GENERAL
+*
+    box-sizing: border-box    
+a
+    text-decoration: none
+
+body
+    font-family: 'Roboto', sans-serif
+    color: $blue
+// WIDTH
+.w100
+    width: 100%
+.w80
+    width: 100%
+.w50
+    width: 100%
+.w40
+    width: 50%
+.h100
+    height: 100%
+// FONT SIZE
+.f16
+    font-size: 16px 
+.f18
+    font-size: 18px
+.f20
+    font-size: 20px
+.f22
+    font-size: 22px
+.f24
+    font-size: 24px
+.f28
+    font-size: 28px
+.f30
+    font-size: 30px
+.f40
+    font-size: 40px
+//BACKGROUND
+.bg-blue
+    background-color: $blue
+.bg-white
+    background-color: white
+//COLOR
+.blue
+    color: $blue
+.gold
+    color: $gold
+.white
+    color: $white
+.color0
+    color: rgba(white,0.0)
+//PADDING
+.pdg-rect
+    padding: 5px 10px
+.pdg-small
+    padding: 3px
+.pdg-medium
+    padding: 5px
+.pdg-large
+    padding: 10px
+//RADIUS
+.radius-small
+    border-radius: 3px
+.radius-medium 
+    border-radius: 5px
+//LAYOUT
+.flex
+    display: flex
+.space-between
+    justify-content: space-between
+.block-center
+    display: flex
+    justify-content: space-around
+.grid5
+    display: grid
+    grid-template-columns: 1fr 1fr
+.grid4
+    display: grid
+    grid-template-columns: 1fr 1fr
+.grid3
+    display: grid
+    grid-template-columns: 1fr
+.grid2
+    display: grid
+    grid-template-columns: 1fr
+.float-left
+    float: left
+.float-right
+    float: right
+//TABLE
+.table-gold
+    border-collapse: collapse
+    td,tr,th
+        border: 1px solid $gold
+        padding: 3px 7px 
+//TEXT
+.center
+    text-align: center
+.upper
+    text-transform: uppercase
+.no-wrap
+    white-space: nowrap
+.justify
+    text-align: justify
+//border
+.border-gold
+    border: 2px solid $gold
+// MISCELLANEOUS
+.overflow-x
+    scrollbar-width: none
+    -ms-overflow-style: none
+    scrollbar-width: none
+    overflow-x: scroll
+    &::-webkit-scrollbar
+        display: none
+
+.sticky
+    position: sticky
+    top: 0px
+    z-index: 100
+
+
+//CUSTOM ELEMENTS
+#alert
+    background-color: #fff159
+    display: flex
+    align-items: center
+    .txt
+        display: inline-block
+        width: 100%
+        text-align: center
+        color: $blue
+        vertical-align: middle
+        padding: 5px
+    .noalert
+        display: inline-block
+        padding: 3px 8px
+        margin: 2px 5px 2px 2px
+        border-radius: 3px
+        font-size: 18px
+        background-color: $blue
+        color: #fff159
+#menuandlogo
+    position: sticky
+    top: 0px
+    z-index: 101
+    background-color: $white
+    .logo 
+        height: 60px
+        display: flex
+        justify-content: space-around
+        position: relative
+        div 
+            img 
+                height: 100%
+        #menutoggle
+            position: absolute
+            top: 7px
+            right: 10px
+    #navigation_container
+        display: none
+        justify-content: space-around
+        height: calc( 100vh - 70px )
+        nav 
+            width: 100%
+        .navigation
+            list-style-type: none
+            padding: 0px
+            margin: 0px
+            width: 100%
+            height: 100%
+            >li 
+                display: block
+                width: 100%
+                padding: 10px 15px 
+                margin: 2px
+                position: relative
+                a 
+                    color: $blue
+                    text-transform: uppercase
+                .submenu
+                    height: 0px
+                    overflow: hidden
+                    background-color: green 
+                    padding: 0px
+                    //top: calc( 1em + 20px )
+                    left: 10%
+                    //z-index: 100
+                    border-radius: 5px
+                    //box-shadow: 3px 5px 5px #acaaaa
+                    >li
+                        padding: 5px 15px
+                        margin: 0px
+                        height: 0px
+                        overflow: hidden
+                        background-color: $white
+                        transition: height 500ms ease
+                        a
+                            color: $gold
+                            text-transform: uppercase
+                            &:visited
+                                color: $gold
+                        &:hover
+                            background-color: #ffffff
+                            a 
+                                color: $blue
+                &:hover
+                    .submenu
+                        //display: block
+                        height: auto
+                        >li
+                            height: calc( 1em + 10px  )
+            
+                    a 
+                        color: $gold
+.fast-item
+    width: 100%
+    border: 2px solid $gold
+    padding: 5px
+    border-radius: 5px
+    position: relative
+    img 
+        width: 100%
+        border-radius: 5px
+    p 
+        position: absolute
+        width: calc( 100% - 10px)
+        margin: 5px
+        padding: 30px 10px 10px 10px
+        bottom: 0px
+        left: 0px
+        color: white
+        font-size: 20px
+        border-radius: 0px 0px 5px 5px
+        background: rgb(2,0,36)
+        background: linear-gradient(0deg, rgba($blue,1) 44%, rgba(9,9,121,0) 96%)
+        transition: all 500ms ease
+    &:hover
+        p
+            height: calc( 100% - 10px )
+            border-radius: 5px
+            background: $blue
+            padding-top: 30%
+            font-size: 24px
+#footer
+    display: grid
+    grid-template-columns: 1fr
+    color: white 
+    .left
+        text-align: left
+        color: white
+        a
+            color: white 
+    .center
+        text-align: center
+        color: white 
+        a
+            color: white 
+    .right
+        text-align: left
+        color: white 
+        a 
+            color: white
+.youtube-container
+    overflow: hidden
+    position: relative
+    width: 100%
+    iframe 
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+
+.youtube-container::after
+    padding-top: 56.25%
+    display: block
+    content: ''
+.header-banner
+    margin: 0px auto
+    width: 100%
+    height: 20vh
+    img 
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+@media screen and (min-width: 480px) //DESKTOP VERSION
+    // WIDTH
+    .w100
+        width: 100%
+    .w80
+        width: 80%
+    .w50
+        width: 50%
+    .w40
+        width: 40%
+    //PADDING
+    .pdg-rect
+        padding: 3px 8px
+    .pdg-small
+        padding: 5px
+    .pdg-medium
+        padding: 10px
+    .pdg-large
+        padding: 20px
+    //RADIUS
+    .radius-small
+        border-radius: 5px
+    .radius-medium 
+        border-radius: 8px
+    //LAYOUT
+    .grid5
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    .grid4
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr 1fr
+    .grid3
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+    .grid2
+        display: grid
+        grid-template-columns: 1fr 1fr
+    //CUSTOM ELEMENTS
+    #menuandlogo
+        all: unset
+        position: relative
+        z-index: 101
+        background-color: white
+        height: auto
+        .logo 
+            height: 100px
+            display: flex
+            justify-content: space-around
+            position: static
+            div 
+                img 
+                    height: 100%
+            #menutoggle
+                position: absolute
+                top: 5px
+                right: 10px
+                display: none 
+        #navigation_container
+            position: sticky 
+            top: 0px   
+            display: flex
+            justify-content: space-around
+            height: auto
+            background-color: white
+            z-index: 1000
+            nav 
+                width: auto 
+ 
+            .navigation
+                list-style-type: none
+                padding: 0px
+                margin: 0px
+                width: auto
+                height: auto
+                >li 
+                    display: inline-block
+                    padding: 10px 15px 
+                    margin: 2px
+                    position: relative
+                    width: auto
+                    a 
+                        color: $blue
+                        text-transform: uppercase
+
+                    .submenu
+                        height: 0px
+                        overflow: hidden
+                        position: absolute
+                        top: calc( 1em + 20px )
+                        left: 10%
+                        border-radius: 5px
+                        //box-shadow: 3px 5px 5px #acaaaa
+                        background-color: green 
+                        padding: 0px
+                        //box-shadow: 3px 5px 5px #acaaaa
+                        >li
+                            padding: 5px 15px
+                            margin: 0px
+                            height: 0px
+                            overflow: hidden
+                            background-color: $white
+                            transition: height 500ms ease
+                            a
+                                color: $gold
+                                text-transform: uppercase
+                                &:visited
+                                    color: $gold
+                            &:hover
+                                background-color: #ffffff
+                                a 
+                                    color: $blue
+
+                    &:hover
+                        .submenu
+                            //display: block
+                            height: auto
+                            >li
+                                height: calc( 1em + 10px  )
+                
+                        a 
+                            color: $gold
+    #footer
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        color: white 
+        .left
+            text-align: left
+            color: white
+            a
+                color: white 
+        .center 
+            text-align: center
+            color: white 
+            a
+                color: white 
+        .right
+            text-align: right
+            color: white 
+            a 
+                color: white
+    .fast-item
+        p 
+            font-size: 24px
+        &:hover
+            p
+                font-size: 30px
+    .header-banner
+        width: 80%
+        height: auto
+        img 
+            object-fit: contain
+        
+
